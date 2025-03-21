@@ -1,10 +1,10 @@
-package com.healinghub.rest_server;
+package com.example.healing_hub;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestServerApplicationTests {
+class HealingHubApplicationTests {
 
 	@Test
 	void contextLoads() {
