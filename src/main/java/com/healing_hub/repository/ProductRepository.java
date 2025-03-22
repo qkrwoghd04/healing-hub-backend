@@ -41,7 +41,6 @@ public class ProductRepository {
 
     /* 상품 추가 */
     public Product saveProduct(Product product) {
-        product.setId(UUID.randomUUID().toString());
         Map<String, AttributeValue> itemValues = new HashMap<>();
         itemValues.put("id", AttributeValue.builder().s(product.getId()).build());
         itemValues.put("name", AttributeValue.builder().s(product.getName()).build());

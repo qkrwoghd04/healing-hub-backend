@@ -17,7 +17,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // CSRF 공격 방어 기능 비활성화 (개발 편의성)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/", "/products", "/products/**").permitAll() // "/", "/products"는 누구나 접근 가능
-                        .anyRequest().authenticated() // 나머지 모든 요청은 인증 필요
+                        .anyRequest().permitAll()
                 );
         return http.build();
     }
