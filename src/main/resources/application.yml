@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: healing-hub
+  profiles:
+    active: KEY
+
+aws:
+  region: ${AWS_KEY.AWS_REGION}
+  accessKeyId: ${AWS_KEY.AWS_ACCESS_KEY_ID}
+  secretAccessKey: ${AWS_KEY.AWS_SECRET_ACCESS_KEY}
