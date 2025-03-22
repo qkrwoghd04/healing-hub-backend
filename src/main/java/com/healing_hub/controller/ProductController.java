@@ -2,9 +2,7 @@ package com.healing_hub.controller;
 
 import com.healing_hub.dto.Product;
 import com.healing_hub.repository.ProductRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,4 +20,21 @@ public class ProductController {
     public List<Product> getProducts() {
         return productRepository.getAllProducts();
     }
+
+    @PostMapping
+    public Product addProduct(@RequestBody Product product) {
+        return productRepository.saveProduct(product);
+    }
+
+    @PatchMapping("/{id}")
+    public Product updateProduct(@PathVariable String id, @RequestBody Product product) {
+        product.setId(id);
+        return productRepository.updateProduct(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable String id) {
+        productRepository.deleteProduct(id);
+    }
+
 }
