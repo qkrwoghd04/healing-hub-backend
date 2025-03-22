@@ -1,4 +1,4 @@
-name: "🐞 Error"
+name: "Error"
 description: "버그 리포트 또는 에러 제보"
 title: "error:  "
 labels: ["bug"]
